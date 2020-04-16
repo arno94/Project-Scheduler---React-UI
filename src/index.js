@@ -6,6 +6,7 @@ ReactDOM.render(
 <App />,
  document.getElementById('app-root'),
 
+$(document).ready(function() {
 AP.request('/rest/api/2/user/bulk?accountId=5bffb0cfa1b46046f530c813', {
     success: function(responseText){
       var json = (JSON.parse(responseText));
@@ -16,3 +17,4 @@ AP.request('/rest/api/2/user/bulk?accountId=5bffb0cfa1b46046f530c813', {
     }
   })
  );
+}
